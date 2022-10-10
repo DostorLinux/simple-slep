@@ -1,0 +1,20 @@
+{
+    "name": "siturra/doctrine1-php7",
+    "type": "library",
+    "description": "PHP7 Database ORM Doctrine 1",
+    "keywords": ["orm", "database", "doctrine1", "php7"],
+    "homepage": "http://www.doctrine-project.org",
+    "license": "MIT",
+    "authors": [
+        {"name": "Konsta Vesterinen", "email": "kvesteri@cc.hut.fi"},
+        {"name": "Jonathan Wage", "email": "jonwage@gmail.com"},
+        {"name": "Sebastian Iturra", "email": "iturra.sebastian@hotmail.com"}
+    ],
+    "require": {
+        "php": ">=7.0",
+        "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-0": { "Doctrine_": "lib/" }
+    }
+}

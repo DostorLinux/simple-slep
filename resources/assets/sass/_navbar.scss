@@ -1,0 +1,30 @@
+.simple-nav-dark {
+	a.nav-username {
+        outline: none;
+        color: white !important;
+        strong {
+            text-decoration: underline;
+        }
+    }
+}
+
+.simple-bknd-menu-items {
+    background-color: #B3B3B3;
+
+    .menu-links {
+        li {
+            list-style: none;
+            display: inline-flex;
+            a {
+                color: #212529;
+                text-decoration: underline;
+            }
+            &:hover {
+                background-color: white;
+            }
+            &.active {
+                background-color: white;
+            }
+        }
+    }
+}
