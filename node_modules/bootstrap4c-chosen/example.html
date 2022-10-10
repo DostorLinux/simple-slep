@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Example</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="dist/css/component-chosen.css" rel="stylesheet">
+</head>
+<body class="h-100">
+  <div class="container h-100">
+    <div class="d-flex align-items-start flex-column h-100">
+      <form>
+        <div class="w-100 m-auto py-5">
+          <div class="row">
+            <div class="col-xs-12 col-md-6 mb-5">
+              <label>Single:</label>
+              <select id="single" class="form-control form-control-chosen" data-placeholder="Please select...">
+                <option></option>
+                <option>Option One</option>
+                <option>Option Two</option>
+                <option>Option Three is a very very very very very very very very very very long text</option>
+                <option>Option Four</option>
+                <option>Option Five</option>
+                <option>Option Six</option>
+                <option>Option Seven</option>
+                <option>Option Eight</option>
+              </select>
+            </div>
+            <div class="col-xs-12 col-md-6 mb-5">
+              <label>Single (required):</label>
+              <select id="required" class="form-control form-control-chosen-required" data-placeholder="Please select...">
+                <option></option>
+                <option>Option One</option>
+                <option>Option Two</option>
+                <option>Option Three is a very very very very very very very very very very long text</option>
+                <option>Option Four</option>
+                <option>Option Five</option>
+                <option>Option Six</option>
+                <option>Option Seven</option>
+                <option>Option Eight</option>
+              </select>
+            </div>
+            <div class="col-xs-12 col-md-6 mb-5">
+              <label>Multiple:</label>
+              <select id="multiple" class="form-control form-control-chosen" data-placeholder="Please select..." multiple>
+                <option></option>
+                <option selected>Option One</option>
+                <option>Option Two</option>
+                <option selected>Option Three is a very very very very very very very very very very long text</option>
+                <option>Option Four</option>
+                <option>Option Five</option>
+                <option>Option Six</option>
+                <option>Option Seven</option>
+                <option>Option Eight</option>
+              </select>
+            </div>
+            <div class="col-xs-12 col-md-6 mb-5">
+              <label>Optgroup:</label>
+              <select id="optgroup" class="form-control form-control-chosen" data-placeholder="Please select..." multiple>
+                <optgroup label="Label A">
+                  <option>Option One</option>
+                  <option>Option Two</option>
+                  <option>Option Three is a very very very very very very very very very very long text</option>
+                  <option>Option Four</option>
+                </optgroup>
+                <optgroup label="Label B">
+                  <option>Option Five</option>
+                  <option>Option Six</option>
+                  <option>Option Seven</option>
+                  <option>Option Eight</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="col-xs-12 col-md-6 mb-5">
+              <label>Clickable optgroup:</label>
+              <select id="optgroup_clickable" class="form-control form-control-chosen-optgroup" title="clickable_optgroup" data-placeholder="Please select..." multiple>
+                <optgroup label="Label A">
+                  <option>Option One</option>
+                  <option>Option Two</option>
+                  <option>Option Three is a very very very very very very very very very very long text</option>
+                  <option>Option Four</option>
+                </optgroup>
+                <optgroup label="Label B">
+                  <option>Option Five</option>
+                  <option>Option Six</option>
+                  <option>Option Seven</option>
+                  <option>Option Eight</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="col-xs-12 col-md-6 mb-5">
+              <label>Input group:</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="">Options</label>
+                </div>
+                <select id="multiple" class="form-control form-control-chosen" data-placeholder="Please select..." multiple>
+                  <option></option>
+                  <option>Option One</option>
+                  <option>Option Two</option>
+                  <option>Option Three is a very very very very very very very very very very long text</option>
+                  <option>Option Four</option>
+                  <option>Option Five</option>
+                  <option>Option Six</option>
+                  <option>Option Seven</option>
+                  <option>Option Eight</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6 mb-5">
+              <label>Is valid:</label>
+              <select id="is_valid" class="form-control form-control-chosen" data-placeholder="Please select...">
+                <option></option>
+                <option>Option One</option>
+                <option>Option Two</option>
+                <option selected>Option Three is a very very very very very very very very very very long text</option>
+                <option>Option Four</option>
+                <option>Option Five</option>
+                <option>Option Six</option>
+                <option>Option Seven</option>
+                <option>Option Eight</option>
+              </select>
+            </div>
+            <div class="col-xs-12 col-md-6 mb-5">
+              <label>Is invalid:</label>
+              <select id="is_invalid" class="form-control form-control-chosen" data-placeholder="Please select...">
+                <option></option>
+                <option>Option One</option>
+                <option>Option Two</option>
+                <option selected>Option Three is a very very very very very very very very very very long text</option>
+                <option>Option Four</option>
+                <option>Option Five</option>
+                <option>Option Six</option>
+                <option>Option Seven</option>
+                <option>Option Eight</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="node_modules/chosen-js/chosen.jquery.js"></script>
+  <script type="text/javascript">
+$('.form-control-chosen').chosen({
+  allow_single_deselect: true,
+  width: '100%'
+});
+$('.form-control-chosen-required').chosen({
+  allow_single_deselect: false,
+  width: '100%'
+});
+$('.form-control-chosen-search-threshold-100').chosen({
+  allow_single_deselect: true,
+  disable_search_threshold: 100,
+  width: '100%'
+});
+$('.form-control-chosen-optgroup').chosen({
+  width: '100%'
+});
+
+$(function() {
+  $('[title="clickable_optgroup"]').addClass('chosen-container-optgroup-clickable');
+});
+$(document).on('click', '[title="clickable_optgroup"] .group-result', function() {
+  var unselected = $(this).nextUntil('.group-result').not('.result-selected');
+  if(unselected.length) {
+    unselected.trigger('mouseup');
+  } else {
+    $(this).nextUntil('.group-result').each(function() {
+      $('a.search-choice-close[data-option-array-index="' + $(this).data('option-array-index') + '"]').trigger('click');
+    });
+  }
+});
+$('#is_valid_chosen').addClass('is-valid');
+$('#is_invalid_chosen').addClass('is-invalid');
+  </script>
+</body>
+</html>

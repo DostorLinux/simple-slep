@@ -1,0 +1,47 @@
+{
+  "name": "bootstrap4c-chosen",
+  "description": "Bootstrap 4 Component - Chosen",
+  "version": "1.1.1",
+  "license": "MIT",
+  "author": {
+    "name": "Martin Haubek",
+    "email": "haubek@gmail.com"
+  },
+  "scripts": {
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haubek/bootstrap4c-chosen"
+  },
+  "main": "dist/css/bootstrap4c-chosen.css",
+  "homepage": "https://haubek.github.io",
+  "bugs": {
+    "url": "https://github.com/haubek/bootstrap4c-chosen/issues"
+  },
+  "keywords": [
+    "bootstrap",
+    "component",
+    "custom",
+    "chosen",
+    "sass",
+    "scss",
+    "css"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "chosen-js": "^1.8.3"
+  },
+  "devDependencies": {
+    "cryptiles": "^4.1.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-strip-css-comments": "^1.2.0",
+    "minimatch": "^3.0.4",
+    "sass-svg-uri": "^1.0.0"
+  }
+}
