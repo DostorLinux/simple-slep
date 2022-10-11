@@ -8,7 +8,7 @@ WORKDIR $DIRECTORY_PROJECT
 RUN apt-get update && apt-get install -y \
   git zip unzip gnupg \
   libxml2-dev zip unzip zlib1g-dev \
-  libpng-dev libmcrypt-dev \
+  libpng-dev libmcrypt-dev yarn \
   --no-install-recommends
 
   # Docker extension install
