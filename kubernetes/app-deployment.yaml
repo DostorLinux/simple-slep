@@ -1,0 +1,307 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yml
+    kompose.version: 1.26.1 (a9d05d509)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: app
+  name: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: app
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose.yml
+        kompose.version: 1.26.1 (a9d05d509)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/esnet: "true"
+        io.kompose.service: app
+    spec:
+      containers:
+        - env:
+            - name: ANALYTICS
+              valueFrom:
+                configMapKeyRef:
+                  key: ANALYTICS
+                  name: env
+            - name: APP_DEBUG
+              valueFrom:
+                configMapKeyRef:
+                  key: APP_DEBUG
+                  name: env
+            - name: APP_ENV
+              valueFrom:
+                configMapKeyRef:
+                  key: APP_ENV
+                  name: env
+            - name: APP_KEY
+              valueFrom:
+                configMapKeyRef:
+                  key: APP_KEY
+                  name: env
+            - name: APP_LOG_LEVEL
+              valueFrom:
+                configMapKeyRef:
+                  key: APP_LOG_LEVEL
+                  name: env
+            - name: APP_MAIN_DOMAIN
+              valueFrom:
+                configMapKeyRef:
+                  key: APP_MAIN_DOMAIN
+                  name: env
+            - name: APP_NAME
+              valueFrom:
+                configMapKeyRef:
+                  key: APP_NAME
+                  name: env
+            - name: APP_PORT
+              valueFrom:
+                configMapKeyRef:
+                  key: APP_PORT
+                  name: env
+            - name: APP_URL
+              valueFrom:
+                configMapKeyRef:
+                  key: APP_URL
+                  name: env
+            - name: BROADCAST_DRIVER
+              valueFrom:
+                configMapKeyRef:
+                  key: BROADCAST_DRIVER
+                  name: env
+            - name: CACHE_DRIVER
+              valueFrom:
+                configMapKeyRef:
+                  key: CACHE_DRIVER
+                  name: env
+            - name: CONECTOR
+              valueFrom:
+                configMapKeyRef:
+                  key: CONECTOR
+                  name: env
+            - name: DB_CONNECTION
+              valueFrom:
+                configMapKeyRef:
+                  key: DB_CONNECTION
+                  name: env
+            - name: DB_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  key: DB_DATABASE
+                  name: env
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  key: DB_HOST
+                  name: env
+            - name: DB_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  key: DB_PASSWORD
+                  name: env
+            - name: DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  key: DB_PORT
+                  name: env
+            - name: DB_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  key: DB_USERNAME
+                  name: env
+            - name: DESTINATARIOS_CRON
+              valueFrom:
+                configMapKeyRef:
+                  key: DESTINATARIOS_CRON
+                  name: env
+            - name: DOWNLOADS_MAX_JOBS_PER_USER
+              valueFrom:
+                configMapKeyRef:
+                  key: DOWNLOADS_MAX_JOBS_PER_USER
+                  name: env
+            - name: ELASTICSEARCH_HOST
+              valueFrom:
+                configMapKeyRef:
+                  key: ELASTICSEARCH_HOST
+                  name: env
+            - name: ELASTICSEARCH_INDEX
+              valueFrom:
+                configMapKeyRef:
+                  key: ELASTICSEARCH_INDEX
+                  name: env
+            - name: ELASTICSEARCH_PORT
+              valueFrom:
+                configMapKeyRef:
+                  key: ELASTICSEARCH_PORT
+                  name: env
+            - name: JS_DIAGRAM
+              valueFrom:
+                configMapKeyRef:
+                  key: JS_DIAGRAM
+                  name: env
+            - name: JWT_API_TOKEN_KEY
+              valueFrom:
+                configMapKeyRef:
+                  key: JWT_API_TOKEN_KEY
+                  name: env
+            - name: JWT_SECRET
+              valueFrom:
+                configMapKeyRef:
+                  key: JWT_SECRET
+                  name: env
+            - name: JWT_URL_API_FIRMA
+              valueFrom:
+                configMapKeyRef:
+                  key: JWT_URL_API_FIRMA
+                  name: env
+            - name: MAIL_DRIVER
+              valueFrom:
+                configMapKeyRef:
+                  key: MAIL_DRIVER
+                  name: env
+            - name: MAIL_ENCRYPTION
+              valueFrom:
+                configMapKeyRef:
+                  key: MAIL_ENCRYPTION
+                  name: env
+            - name: MAIL_HOST
+              valueFrom:
+                configMapKeyRef:
+                  key: MAIL_HOST
+                  name: env
+            - name: MAIL_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  key: MAIL_PASSWORD
+                  name: env
+            - name: MAIL_PORT
+              valueFrom:
+                configMapKeyRef:
+                  key: MAIL_PORT
+                  name: env
+            - name: MAIL_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  key: MAIL_USERNAME
+                  name: env
+            - name: PHP_LOCALE
+              valueFrom:
+                configMapKeyRef:
+                  key: PHP_LOCALE
+                  name: env
+            - name: PUSHER_APP_CLUSTER
+              valueFrom:
+                configMapKeyRef:
+                  key: PUSHER_APP_CLUSTER
+                  name: env
+            - name: PUSHER_APP_ID
+              valueFrom:
+                configMapKeyRef:
+                  key: PUSHER_APP_ID
+                  name: env
+            - name: PUSHER_APP_KEY
+              valueFrom:
+                configMapKeyRef:
+                  key: PUSHER_APP_KEY
+                  name: env
+            - name: PUSHER_APP_SECRET
+              valueFrom:
+                configMapKeyRef:
+                  key: PUSHER_APP_SECRET
+                  name: env
+            - name: QUEUE_DRIVER
+              valueFrom:
+                configMapKeyRef:
+                  key: QUEUE_DRIVER
+                  name: env
+            - name: RABBITMQ_DEFAULT_PASS
+              valueFrom:
+                configMapKeyRef:
+                  key: RABBITMQ_DEFAULT_PASS
+                  name: env
+            - name: RABBITMQ_DEFAULT_USER
+              valueFrom:
+                configMapKeyRef:
+                  key: RABBITMQ_DEFAULT_USER
+                  name: env
+            - name: RABBITMQ_DEFAULT_VHOST
+              valueFrom:
+                configMapKeyRef:
+                  key: RABBITMQ_DEFAULT_VHOST
+                  name: env
+            - name: RABBITMQ_HOST
+              valueFrom:
+                configMapKeyRef:
+                  key: RABBITMQ_HOST
+                  name: env
+            - name: RABBITMQ_PORT
+              valueFrom:
+                configMapKeyRef:
+                  key: RABBITMQ_PORT
+                  name: env
+            - name: RABBITMQ_PORT_MANAGER
+              valueFrom:
+                configMapKeyRef:
+                  key: RABBITMQ_PORT_MANAGER
+                  name: env
+            - name: RABBITMQ_QUEUE
+              valueFrom:
+                configMapKeyRef:
+                  key: RABBITMQ_QUEUE
+                  name: env
+            - name: RECAPTCHA_SECRET_KEY
+              valueFrom:
+                configMapKeyRef:
+                  key: RECAPTCHA_SECRET_KEY
+                  name: env
+            - name: RECAPTCHA_SITE_KEY
+              valueFrom:
+                configMapKeyRef:
+                  key: RECAPTCHA_SITE_KEY
+                  name: env
+            - name: REDIS_HOST
+              valueFrom:
+                configMapKeyRef:
+                  key: REDIS_HOST
+                  name: env
+            - name: REDIS_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  key: REDIS_PASSWORD
+                  name: env
+            - name: REDIS_PORT
+              valueFrom:
+                configMapKeyRef:
+                  key: REDIS_PORT
+                  name: env
+            - name: SCOUT_DRIVER
+              valueFrom:
+                configMapKeyRef:
+                  key: SCOUT_DRIVER
+                  name: env
+            - name: SESSION_DRIVER
+              valueFrom:
+                configMapKeyRef:
+                  key: SESSION_DRIVER
+                  name: env
+            - name: SESSION_LIFETIME
+              valueFrom:
+                configMapKeyRef:
+                  key: SESSION_LIFETIME
+                  name: env
+          image: dostorlinux/simple-test
+          name: simple2-web
+          ports:
+            - containerPort: 80
+          resources: {}
+          tty: true
+          workingDir: /var/www/simple
+      restartPolicy: Always
+status: {}
