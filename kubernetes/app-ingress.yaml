@@ -7,7 +7,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-  - match: Host(`simple.slepvalparaiso.cl`) && PathPrefix(`/tls`)
+  - match: Host(`simple.slepvalparaiso.cl`)
     kind: Rule
     services:
     - name: app

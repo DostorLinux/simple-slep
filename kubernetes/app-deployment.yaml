@@ -296,12 +296,14 @@ spec:
                 configMapKeyRef:
                   key: SESSION_LIFETIME
                   name: env
-          image: dostorlinux/simple-test
+          image: dostorlinux/slep-valpo:latest
           name: simple2-web
           ports:
             - containerPort: 80
           resources: {}
           tty: true
           workingDir: /var/www/simple
+      imagePullSecrets:
+        - name: regcred
       restartPolicy: Always
 status: {}
