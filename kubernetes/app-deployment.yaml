@@ -25,6 +25,7 @@ spec:
         io.kompose.service: app
     spec:
       containers:
+        - imagePullPolicy: "Always"
         - env:
             - name: ANALYTICS
               valueFrom:
