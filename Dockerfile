@@ -46,7 +46,7 @@ RUN { \
         echo 'server {'; \
         echo '    listen 80;'; \
         echo '    server_name _;'; \
-        echo '    root /var/www/simple/public;'; \
+        echo '    root /var/www/public;'; \
         echo '    include /etc/nginx/default.d/*.conf;'; \
         echo '    index index.php;'; \
         echo '    error_log /var/log/nginx/error.log;'; \
