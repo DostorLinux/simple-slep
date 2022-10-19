@@ -21,7 +21,7 @@ spec:
         kompose.version: 1.26.1 (a9d05d509)
       creationTimestamp: null
       labels:
-        io.kompose.network/esnet: "true"
+#        io.kompose.network/esnet: "true"
         io.kompose.service: app
     spec:
       containers:
@@ -302,7 +302,7 @@ spec:
             - containerPort: 80
           resources: {}
           tty: true
-          workingDir: /var/www/simple
+          workingDir: /var/www/
           imagePullPolicy: "Always"
       imagePullSecrets:
         - name: regcred
