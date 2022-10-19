@@ -152,7 +152,7 @@ ENV TZ America/Santiago
 
 WORKDIR $DIRECTORY_PROJECT
 
-# Expose port 9000 and start php-fpm server
-EXPOSE 9000
-EXPOSE 80
-CMD ["php-fpm"]
+# Expose ports and start php-fpm server
+EXPOSE 80 3000 9000
+ENTRYPOINT ["entrypoint"]
+#CMD ["php-fpm"]
