@@ -52,6 +52,14 @@ return [
             'prefix' => '',
             'strict' => true,
             'engine' => null,
+            'sslmode' => env('DB_SSLMODE', 'prefer'),
+            'options'   => array(
+                PDO::MYSQL_ATTR_SSL_CA      => resource_path('certificates/mysql-slep-ca-certificate.crt') //'/path/to/ca-cert.pem',
+            ),
+            //'options' => extension_loaded('pdo_mysql') && env('APP_ENV') !== 'testing' && env('APP_ENV') !== 'local' ? array_filter([
+            //    PDO::MYSQL_ATTR_SSL_CA => resource_path('certificates/mysql-slep-ca-certificate.crt'),
+            //    PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => true,
+            //]) : [],
             // Explicitly enable specific modes, overriding strict setting
             'modes' => [
                 'STRICT_TRANS_TABLES',
@@ -73,7 +81,12 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
-            'sslmode' => 'prefer',
+            //'sslmode' => 'prefer',
+            'sslmode' => env('DB_SSLMODE', 'prefer'),
+            'options' => extension_loaded('pdo_mysql') && env('APP_ENV') !== 'testing' && env('APP_ENV') !== 'local' ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => resource_path('certificates/mysql-slep-ca-certificate.crt'),
+                PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => true,
+            ]) : [],
         ],
 
         'sqlsrv' => [

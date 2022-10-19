@@ -8,16 +8,16 @@ data:
   APP_MAIN_DOMAIN: ""
   APP_NAME: SIMPLE
   APP_PORT: "8000"
-  APP_URL: http://simple.newstack.cl
+  APP_URL: http://simple.slepvalparaiso.cl
   BROADCAST_DRIVER: log
   CACHE_DRIVER: file
   CONECTOR: Flowchart
   DB_CONNECTION: mysql
   DB_DATABASE: simple
-  DB_HOST: db
-  DB_PASSWORD: "1234"
+  DB_HOST: lin-10207-6336-mysql-primary-private.servers.linodedb.net
+  DB_PASSWORD: "i7+mTVsy2Yeznfyh"
   DB_PORT: "3306"
-  DB_USERNAME: root
+  DB_USERNAME: linroot
   DESTINATARIOS_CRON: ""
   DOWNLOADS_MAX_JOBS_PER_USER: "1"
   ELASTICSEARCH_HOST: elasticsearch:9200
@@ -48,7 +48,7 @@ data:
   RABBITMQ_QUEUE: simple_test
   RECAPTCHA_SECRET_KEY: ""
   RECAPTCHA_SITE_KEY: ""
-  REDIS_HOST: 127.0.0.1
+  REDIS_HOST: redis
   REDIS_PASSWORD: "null"
   REDIS_PORT: "6379"
   SCOUT_DRIVER: elasticsearch

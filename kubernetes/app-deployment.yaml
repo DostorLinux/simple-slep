@@ -25,7 +25,6 @@ spec:
         io.kompose.service: app
     spec:
       containers:
-        - imagePullPolicy: "Always"
         - env:
             - name: ANALYTICS
               valueFrom:
@@ -304,6 +303,7 @@ spec:
           resources: {}
           tty: true
           workingDir: /var/www/simple
+          imagePullPolicy: "Always"
       imagePullSecrets:
         - name: regcred
       restartPolicy: Always
